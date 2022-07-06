@@ -1,0 +1,37 @@
+.loginArea {
+  align-items: center;
+  background-color: #fafafa;
+  display: flex;
+  flex-flow: column;
+  gap: 30px;
+  height: 800px;
+  justify-content: center;
+}
+
+.form {
+  align-items: center;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0.2px 4px 4px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-flow: column;
+  gap: 10px;
+  height: 314px;
+  justify-content: center;
+  width: 697px;
+}
+
+.form input {
+  border: 1px solid #e1e5eb;
+  height: 45px;
+  width: 519px;
+}
+
+.form button {
+  background: #00279c;
+  border-radius: 2px;
+  box-shadow: 0.2px 4px 4px rgba(0, 0, 0, 0.25);
+  color: white;
+  height: 40px;
+  width: 519px;
+}

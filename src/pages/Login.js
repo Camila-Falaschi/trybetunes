@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { createUser } from '../services/userAPI';
 import logoTrybeTunes from '../images/logo_TrybeTunes.png';
 import Loading from '../components/Loading';
+import '../css/Login.css';
 
 class Login extends React.Component {
   constructor() {
@@ -43,13 +44,13 @@ class Login extends React.Component {
   render() {
     const { userName, isButtonDisabled, loading } = this.state;
     return (
-      <div data-testid="page-login">
+      <div data-testid="page-login" className="loginArea">
         {
           loading ? <Loading />
             : (
               <>
                 <img src={ logoTrybeTunes } alt="Logo Trybe Tunes" />
-                <form>
+                <form className="form">
                   <input
                     type="text"
                     name="userName"
