@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { createUser } from '../services/userAPI';
 import logoTrybeTunes from '../images/logo_TrybeTunes.png';
-import Loading from './Loading';
+import Loading from '../components/Loading';
 
 class Login extends React.Component {
   constructor() {

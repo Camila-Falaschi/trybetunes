@@ -1,0 +1,26 @@
+.header {
+  align-items: center;
+  background: #023031;
+  display: flex;
+  justify-content: space-between;
+}
+
+.headerLogo {
+  width: 120px;
+}
+
+.userArea {
+  align-items: center;
+  background: white;
+  border-radius: 50px;
+  display: flex;
+  height: 40px;
+  justify-content: center;
+  width: 200px;
+}
+
+.userArea h3 {
+  color: #29313d;
+  font-size: 18px;
+  font-weight: 500;
+}

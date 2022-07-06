@@ -12,8 +12,6 @@ class App extends React.Component {
   render() {
     return (
       <main>
-        <p>TrybeTunes!</p>
-
         <Switch>
           <Route path="/" component={ Login } exact />
           <Route path="/search" component={ Search } exact />
