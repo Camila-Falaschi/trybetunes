@@ -1,0 +1,63 @@
+/* o css foi criado baseando-se na apresentação no Figma */
+
+/* disponibilizado no ReadMe do projeto */
+
+/* (https://www.figma.com/file/BDQgAJvOe4KNUjmrYh5t68/TrybeTunes-Figma?node-id=0%3A1) */
+.pageSearch {
+  display: flex;
+  flex-flow: column;
+  gap: 50px;
+}
+
+.searchArea {
+  align-items: center;
+  display: flex;
+  flex-flow: column;
+  gap: 50px;
+  height: 900px;
+}
+
+.searchForm {
+  box-shadow: unset;
+  display: flex;
+  flex-flow: row;
+  height: 40px;
+  justify-content: space-evenly;
+  width: 600px;
+}
+
+.searchForm input {
+  border: 1px solid #3d495c;
+  border-radius: 6px;
+  width: 70%;
+}
+
+.searchForm button {
+  background: #002caf;
+  border-radius: 5px;
+  color: white;
+  width: 90px;
+}
+
+.albumsArea {
+  display: flex;
+  flex-flow: row wrap;
+  gap: 40px;
+  justify-content: center;
+  width: 100%;
+}
+
+.album {
+  border: 1px solid #e1e5eb;
+  border-radius: 6px;
+  box-shadow: 0.2px 1px 2px rgba(0, 0, 0, 0.06) , 0.2px 1px 3px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-flow: row wrap;
+  gap: 10px;
+  justify-content: center;
+  width: 290px;
+}
+
+.album img {
+  width: 200px;
+}
