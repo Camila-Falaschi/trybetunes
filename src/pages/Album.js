@@ -45,9 +45,7 @@ class Album extends React.Component {
             <h3 data-testid="album-name">{albumName}</h3>
             <p data-testid="artist-name">{singerName}</p>
           </section>
-          <section className="songsList">
-            <MusicCard songsList={ songsList } />
-          </section>
+          <MusicCard songsList={ songsList } />
         </section>
       </div>
     );
