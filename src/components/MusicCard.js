@@ -1,9 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { addSong } from '../services/favoriteSongsAPI';
+import { addSong, removeSong } from '../services/favoriteSongsAPI';
 import Loading from './Loading';
 
 class MusicCard extends React.Component {
+  // Para 'props' dentro do constructor e '.some' foi recebido a orientação e auxilio do Willian Portela - Turma 22 - Tribo A
   constructor(props) {
     super(props);
     const { favSongsArray, song } = this.props;
@@ -15,14 +16,23 @@ class MusicCard extends React.Component {
 
   saveAsFavorite = () => {
     const { song } = this.props;
+    const { isChecked } = this.state;
     this.setState({
       loading: true,
     }, async () => {
-      await addSong(song);
-      this.setState({
-        loading: false,
-        isChecked: true,
-      });
+      if (isChecked) {
+        await removeSong(song);
+        this.setState({
+          loading: false,
+          isChecked: false,
+        });
+      } else {
+        await addSong(song);
+        this.setState({
+          loading: false,
+          isChecked: true,
+        });
+      }
     });
   }
 
