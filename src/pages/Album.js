@@ -2,6 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Header from '../components/Header';
 import getMusics from '../services/musicsAPI';
+import '../css/Album.css';
+import MusicCard from '../components/MusicCard';
 
 class Album extends React.Component {
   constructor() {
@@ -35,32 +37,16 @@ class Album extends React.Component {
   render() {
     const { albumImage, albumName, singerName, songsList } = this.state;
     return (
-      <div data-testid="page-album">
+      <div data-testid="page-album" className="pageAlbum">
         <Header />
-        <section>
+        <section className="albumArea">
           <section className="albumInfo">
             <img src={ albumImage } alt={ albumName } />
             <h3 data-testid="album-name">{albumName}</h3>
             <p data-testid="artist-name">{singerName}</p>
           </section>
-          <section>
-            { songsList.map((song) => (
-              <div key={ song.trackId }>
-                <p>{song.trackName}</p>
-                <audio
-                  data-testid="audio-component"
-                  src={ song.previewUrl }
-                  controls
-                >
-                  <track kind="captions" />
-                  O seu navegador não suporta o elemento
-                  {' '}
-                  {' '}
-                  <code>audio</code>
-                  .
-                </audio>
-              </div>
-            ))}
+          <section className="songsList">
+            <MusicCard songsList={ songsList } />
           </section>
         </section>
       </div>
