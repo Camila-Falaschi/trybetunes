@@ -14,6 +14,7 @@ class MusicCard extends React.Component {
     };
   }
 
+  // Para a condicional 'isChecked' 'removeSong()' foi recebido a orientação e auxilio do Willian Portela - Turma 22 - Tribo A
   saveAsFavorite = () => {
     const { song } = this.props;
     const { isChecked } = this.state;
