@@ -4,15 +4,16 @@ import { addSong } from '../services/favoriteSongsAPI';
 import Loading from './Loading';
 
 class MusicCard extends React.Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
+    const { favSongsArray, song } = this.props;
     this.state = {
       loading: false,
-      isChecked: false,
+      isChecked: favSongsArray.some((id) => id === song.trackId),
     };
   }
 
-  favoriteHandle = () => {
+  saveAsFavorite = () => {
     const { song } = this.props;
     this.setState({
       loading: true,
@@ -56,7 +57,7 @@ class MusicCard extends React.Component {
                   name="favorite"
                   id={ song.trackId }
                   checked={ isChecked }
-                  onChange={ this.favoriteHandle }
+                  onChange={ this.saveAsFavorite }
                 />
               </label>
             </div>
@@ -68,6 +69,7 @@ class MusicCard extends React.Component {
 
 // para 'propTypes' foi consultado a documentação no React (https://reactjs.org/docs/typechecking-with-proptypes.html)
 MusicCard.propTypes = {
+  favSongsArray: PropTypes.arrayOf(PropTypes.number).isRequired,
   song: PropTypes.shape(
     PropTypes.any.isRequired,
   ).isRequired,
